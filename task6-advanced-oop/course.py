@@ -29,6 +29,7 @@ class Course:
     def add_student(self, student: Student):
         if student not in self._students:
             self._students.append(student)
+            return "Student added"
 
     def __iter__(self) -> Iterator[Student]:
         return iter(self._students)
